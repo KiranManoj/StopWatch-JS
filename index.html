@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="timer icon.ico" />
+    <title>Stop Watch</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="flex justify-center items-center">
+    <div
+      class="w-[50vw] h-[50vh] bg-emerald-500 flex flex-col justify-center items-center gap-10 rounded-3xl"
+      id="stopWatch"
+    >
+      <h1 id="displayTime" class="text-8xl">00:00:00</h1>
+      <div class="flex gap-10">
+        <button onclick="watchStop()" class="border rounded-full p-5 bg-orange-600 hover:bg-orange-400 ">Stop</button>
+        <button onclick="watchStart()" class="border rounded-full p-5 bg-orange-600 hover:bg-orange-400">Start</button>
+        <button onclick="watchReset()" class="border rounded-full p-4 bg-orange-600 hover:bg-orange-400">restart</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
