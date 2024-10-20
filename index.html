@@ -8,17 +8,53 @@
     <title>Stop Watch</title>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="flex justify-center items-center">
+  <body class="flex justify-around items-center">
     <div
-      class="w-[50vw] h-[50vh] bg-emerald-500 flex flex-col justify-center items-center gap-10 rounded-3xl"
+      class="w-[40vw] h-[50vh] bg-emerald-500 flex flex-col justify-center items-center gap-10 rounded-3xl"
       id="stopWatch"
     >
+      <h2 class="text-4xl underline underline-offset-4">Stop Watch</h2>
       <h1 id="displayTime" class="text-8xl">00:00:00</h1>
       <div class="flex gap-10">
-        <button onclick="watchStop()" class="border rounded-full p-5 bg-orange-600 hover:bg-orange-400 ">Stop</button>
-        <button onclick="watchStart()" class="border rounded-full p-5 bg-orange-600 hover:bg-orange-400">Start</button>
-        <button onclick="watchReset()" class="border rounded-full p-4 bg-orange-600 hover:bg-orange-400">restart</button>
+        <button
+          onclick="watchStop()"
+          class="border rounded-full p-5 bg-orange-600 hover:bg-orange-400"
+        >
+          Stop
+        </button>
+        <button
+          onclick="watchStart()"
+          class="border rounded-full p-5 bg-orange-600 hover:bg-orange-400"
+        >
+          Start
+        </button>
+        <button
+          onclick="watchReset()"
+          class="border rounded-full p-4 bg-orange-600 hover:bg-orange-400"
+        >
+          restart
+        </button>
       </div>
+    </div>
+    <div
+      class="w-[40vw] h-[50vh] p-5 bg-red-500 rounded-2xl flex flex-col gap-5 justify-center items-center"
+      id="timer"
+    >
+      <h2 class="start text-4xl mb-[3vh] underline underline-offset-4">
+        Timer
+      </h2>
+      <h1 id="started" class="text-8xl">00:00:00</h1>
+      <input
+        class="start w-[7vw] h-[5vh] text-center rounded"
+        type="number"
+        placeholder="in mins"
+      />
+      <button id="timer-button"
+        class="bg-blue-500 hover:bg-blue-400 border-solid border-2 p-5 rounded-full"
+        onclick="Timer()"
+      >
+        Start
+      </button>
     </div>
 
     <script src="script.js"></script>
